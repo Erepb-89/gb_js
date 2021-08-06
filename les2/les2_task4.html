@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        /*
+        Реализовать основные 4 арифметические операции (+, -, /, *) в виде функций с двумя параметрами. 
+        Т.е. например, функция для сложения должна принимать два числа, складывать их и возвращать результат.
+        Обязательно использовать оператор return.
+        */
+        function f_add(num1, num2) {
+            return num1 + num2
+        }
+
+        function f_sub(num1, num2) {
+            return num1 - num2
+        }
+
+        function f_mul(num1, num2) {
+            return num1 * num2
+        }
+
+        function f_div(num1, num2) {
+            return num1 / num2
+        }
+        
+        var res;
+        let a = parseInt(prompt("Введите 1е целое число")); 
+        let b = parseInt(prompt("Введите 2е целое число"));
+
+        sign = prompt("Введите знак (+,-,*,/): ");
+        if (sign == "+") {
+            res = f_add(a, b)
+        } else if (sign == "-") {
+            res = f_sub(a, b)
+        } else if (sign == "*") {
+            res = f_mul(a, b)
+        } else if (sign == "/") {
+            res = f_div(a, b)
+        } 
+
+        alert(`Результат: ${res}`);
+    </script>
+</body>
+</html>
