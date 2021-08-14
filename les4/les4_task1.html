@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        'use strict';
+
+        class NumbCalc {
+            constructor(num) {
+                this.num = num;
+            }
+
+            NumToObj () {
+                if (!parseInt(this.num)) {
+                    alert("Вы ввели не число");
+                    return {};
+                } else if (parseInt(this.num) > 999 | parseInt(this.num) < 0) {
+                    alert("Вы ввели число вне диапазона [0, 999]");
+                    return {};
+                } else { //if (Number.isInteger(this.num)) {
+                    this.units = this.num % 10;
+                    this.tens = Math.floor(this.num % 100 / 10);
+                    this.hundreds = Math.floor(this.num % 1000 / 100);
+                return {
+                    units: this.units, //это единицы
+                    tens: this.tens, //это десятки
+                    hundreds: this.hundreds, //это сотни
+                    }
+                }
+            }
+        };
+
+        let num1 = new NumbCalc(prompt("Введите число"));
+        let result = num1.NumToObj();
+        console.log(result);
+    </script>
+</body>
+</html>

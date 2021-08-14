@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        /*
+        5. Реализовать функцию с тремя параметрами: function mathOperation(arg1, arg2, operation),
+        где arg1, arg2 – значения аргументов, operation – строка с названием операции. В зависимости от
+        переданного значения операции (использовать switch) выполнить одну из арифметических операций
+        (использовать функции из задания 4) и вернуть полученное значение.
+        */
+        function mathOperation(arg1, arg2, operation) {
+            switch(operation) {
+                case "+":
+                    result = arg1 + arg2;
+                    break;
+                case "-":
+                    result = arg1 - arg2;
+                    break;
+                case "*":
+                    result = arg1 * arg2;
+                    break;
+                case "/":
+                    result = arg1 / arg2;
+                    break;
+            }
+            return result;
+        }
+        
+        var res;
+        let a = parseInt(prompt("Введите 1е целое число")); 
+        let b = parseInt(prompt("Введите 2е целое число"));
+
+        sign = prompt("Введите знак (+,-,*,/): ");
+        res = mathOperation(a, b, sign);
+
+        alert(`Результат: ${res}`);
+    </script>
+</body>
+</html>
